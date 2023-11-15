@@ -20,13 +20,13 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class DriveSubsystem extends SubsystemBase {
   // Create MAXSwerveModules
-  private final MAXSwerveModule avantGauche = new MAXSwerveModule(0,1,-90);
+  private final MAXSwerveModule avantGauche = new MAXSwerveModule(1,2,-90);
 
-  private final MAXSwerveModule avantDroite = new MAXSwerveModule(2,3,0);
+  private final MAXSwerveModule avantDroite = new MAXSwerveModule(3,4,0);
 
-  private final MAXSwerveModule arriereGauche = new MAXSwerveModule(4,5,180);
+  private final MAXSwerveModule arriereGauche = new MAXSwerveModule(5,6,180);
 
-  private final MAXSwerveModule arriereDroite = new MAXSwerveModule(6,7,90);
+  private final MAXSwerveModule arriereDroite = new MAXSwerveModule(7,8,90);
 
   // The gyro sensor
   private final ADXRS450_Gyro gyro = new ADXRS450_Gyro();

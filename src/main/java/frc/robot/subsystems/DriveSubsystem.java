@@ -14,6 +14,7 @@ import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import edu.wpi.first.util.WPIUtilJNI;
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants.DriveConstants;
 import frc.utils.SwerveUtils;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -66,6 +67,7 @@ public class DriveSubsystem extends SubsystemBase {
             arriereGauche.getPosition(),
             arriereDroite.getPosition()
         });
+        SmartDashboard.putNumber("Gyro", getAngle()); 
   }
 
   /**
@@ -216,7 +218,7 @@ public class DriveSubsystem extends SubsystemBase {
    *
    * @return the robot's heading in degrees, from -180 to 180
    */
-  public double getHeading() {
+  public double getAngle() {
     return Rotation2d.fromDegrees(-gyro.getAngle()).getDegrees();
   }
 
